@@ -41,7 +41,7 @@ public class MaterializationStream extends ImiStream {
             .innerFlatMapIterable(materializer::materialize)
             .innerMap(it -> new ProducerRecord<String, Object>(jobPostingViewTopic, it.getHiringIntentId(), it))
             .flatMapAlo(sender::sendAloRecords)
-            .resubscribeOnError(name())
+            .resubscribeOnError(name()) // Catch-all for unhandled errors
             .doAllFinally(__ -> scheduler.dispose(), sender::close)
             .subscribeWith(new DefaultAloSenderResultSubscriber<>());
     }

@@ -16,13 +16,8 @@
 
         <!-- Library Versions -->
         <atleon.version>0.36.0</atleon.version>
-        <amazon-sdk.version>2.21.3</amazon-sdk.version>
-        <apache-kafka.version>3.7.1</apache-kafka.version>
-        <jackson.version>2.16.2</jackson.version>
         <slf4j.version>2.0.11</slf4j.version>
         <netty.version>4.1.113.Final</netty.version>
-        <reactive-streams.version>1.0.4</reactive-streams.version>
-        <reactor.version>3.5.14</reactor.version>
         <snakeyaml.version>2.0</snakeyaml.version>
         <spring.version>5.3.31</spring.version>
         <spring-boot.version>2.7.18</spring-boot.version>
@@ -59,15 +54,6 @@
         </dependency>
         <dependency>
             <groupId>io.atleon</groupId>
-            <artifactId>atleon-aws-util</artifactId>
-            <version>${atleon.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.atleon</groupId>
-            <artifactId>atleon-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.atleon</groupId>
             <artifactId>atleon-json-jackson</artifactId>
         </dependency>
         <dependency>
@@ -85,64 +71,14 @@
 
         <!-- Third Party Compile Dependencies -->
         <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-            <version>${jackson.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.projectreactor</groupId>
-            <artifactId>reactor-core</artifactId>
-            <version>${reactor.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.kafka</groupId>
-            <artifactId>kafka-clients</artifactId>
-            <version>${apache-kafka.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.reactivestreams</groupId>
-            <artifactId>reactive-streams</artifactId>
-            <version>${reactive-streams.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-beans</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
             <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot</artifactId>
-            <version>${spring-boot.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
             <version>${spring-boot.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>software.amazon.awssdk</groupId>
-            <artifactId>sqs</artifactId>
-            <version>${amazon-sdk.version}</version>
         </dependency>
 
         <!-- Third Party Runtime Dependencies -->
@@ -177,24 +113,6 @@
                     <target>${maven.compiler.target}</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.8.1</version>
-                <executions>
-                    <execution>
-                        <id>analyze</id>
-                        <goals>
-                            <goal>analyze-only</goal>
-                        </goals>
-                        <configuration>
-                            <failOnWarning>true</failOnWarning>
-                            <ignoreNonCompile>true</ignoreNonCompile>
-                            <outputXML>true</outputXML>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
