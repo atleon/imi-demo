@@ -1,0 +1,24 @@
+<settings>
+    <servers>
+        <server>
+            <id>maven-central-snapshots</id>
+            <username>${env.MAVEN_CENTRAL_TOKEN_USERNAME}</username>
+            <password>${env.MAVEN_CENTRAL_TOKEN_PASSWORD}</password>
+        </server>
+        <server>
+            <id>maven-central-publishing</id>
+            <username>${env.MAVEN_CENTRAL_TOKEN_USERNAME}</username>
+            <password>${env.MAVEN_CENTRAL_TOKEN_PASSWORD}</password>
+        </server>
+    </servers>
+    <profiles>
+        <profile>
+            <id>oss-release</id>
+            <properties>
+                <gpg.executable>gpg</gpg.executable>
+                <gpg.keyname>${env.GPG_KEY_NAME}</gpg.keyname>
+                <gpg.passphrase>${env.GPG_PASSPHRASE}</gpg.passphrase>
+            </properties>
+        </profile>
+    </profiles>
+</settings>
