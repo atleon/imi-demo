@@ -36,7 +36,7 @@ curl --location 'http://localhost:8080/companyCreatedEvents' \
 ```
 
 #### Create a "Hiring Intent"
-```angular2html
+```bash
 curl --location 'http://localhost:8080/hiringIntentCreatedEvents' \
 --header 'Content-Type: application/json' \
 --data '{
