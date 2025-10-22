@@ -37,7 +37,6 @@ public class InfrastructureInitializer implements EnvironmentPostProcessor {
         properties.put("vars.aws.credentials.provider.type", AwsConfig.CREDENTIALS_PROVIDER_TYPE_STATIC);
         properties.put("vars.aws.credentials.access.key.id", localStackContainer.getAccessKey());
         properties.put("vars.aws.credentials.secret.access.key", localStackContainer.getSecretKey());
-        properties.put("vars.sns.endpoint.override", localStackContainer.getSnsEndpointOverride().toString());
         properties.put("vars.sqs.endpoint.override", localStackContainer.getSqsEndpointOverride().toString());
         return properties;
     }
