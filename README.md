@@ -1,24 +1,28 @@
 # IMI Demo
 This is a demo project for Ingest-Materialize-Index stream topology/architecture, as presented at Confluent Current in New Orleans in 2025.
 
-# How to Run
+This application demos the following architecture:
+
+![IMI Demo Architecture](assets/images/Architecture.png)
+
+## How to Run
 This project is a runnable Spring Boot application. The following instructions show how to execute it:
 
-## Prerequisites
+### Prerequisites
 The following prerequisites must be satisfied in order to run this project:
 
 1. JDK 1.8 or higher installed
 2. Docker running locally
     - Some In order to run some resources locally (i.e. AWS Localstack), Docker is needed
 
-## Running the Application
+### Running the Application
 You can run this application by simply executing the following:
 
 ```bash
 ./mvnw spring-boot:run
 ```
 
-## Interacting with Application
+### Interacting with Application
 You can use the following curl commands to illustrate the purpose of this demo:
 
 #### Create a "Company"
