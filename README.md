@@ -13,7 +13,7 @@ The following prerequisites must be satisfied in order to run this project:
 
 1. JDK 1.8 or higher installed
 2. Docker running locally
-    - Some In order to run some resources locally (i.e. AWS Localstack), Docker is needed
+    - In order to run some resources locally (i.e. AWS Localstack), Docker is needed
 
 ### Running the Application
 You can run this application by simply executing the following:
