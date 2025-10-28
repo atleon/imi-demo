@@ -22,6 +22,7 @@ public abstract class IndexingStream extends ImiStream {
         return buildReceiver()
             .receiveAloRecords(materializationTopic())
             .groupByStringHash(ConsumerRecord::key, concurrency(), ConsumerRecord::value)
+            .innerPublishOn(scheduler)
             .innerConsume(this::index)
             .flatMapAlo()
             .resubscribeOnError(name())
