@@ -41,7 +41,7 @@ public abstract class IngestionStream<T> extends ImiStream {
             .withValueSerializer(JsonKafkaSerializer.class);
     }
 
-    protected abstract AloFlux<? extends T> receive();
+    protected abstract AloFlux<T> receive();
 
     protected abstract String extractEventKey(T event);
 
