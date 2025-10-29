@@ -16,8 +16,10 @@
 
         <!-- Library Versions -->
         <atleon.version>0.36.1</atleon.version>
-        <slf4j.version>2.0.11</slf4j.version>
+        <junit-jupiter.version>5.10.1</junit-jupiter.version>
         <netty.version>4.1.113.Final</netty.version>
+        <slf4j.version>2.0.11</slf4j.version>
+        <spring.version>5.3.31</spring.version> <!-- Driven by Spring Boot version -->
         <spring-boot.version>2.7.18</spring-boot.version>
     </properties>
 
@@ -80,6 +82,24 @@
             <artifactId>slf4j-simple</artifactId>
             <version>${slf4j.version}</version>
             <scope>runtime</scope>
+        </dependency>
+
+        <!-- Third Party Test Dependencies -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit-jupiter.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-test</artifactId>
+            <version>${spring-boot.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
