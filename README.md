@@ -5,8 +5,7 @@ This application demos the following architecture:
 
 ![IMI Demo Architecture](assets/images/Architecture.png)
 
-You can view a demo video (as presented at Confluent Current '25 in New Orleans) here:
-<iframe width="420" height="315" src="https://www.youtube.com/watch?v=51KyQuAXqZk"></iframe>
+You can view a demo video (as presented at Confluent Current '25 in New Orleans) [here](https://www.youtube.com/embed/tgbNymZ7vqY).
 
 ## How to Run
 This project is a runnable Spring Boot application. The following instructions show how to execute it:
